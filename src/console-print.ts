@@ -6,7 +6,6 @@ export function showAppHeader() {
   const localVersion = packageJSON.version
   console.log(
     `\n${chalk.bold.blue(`
-                                      
   ___.__. ____  __ __ __ __  ______
  <   |  |/  _ \\|  |  \\  |  \\/  ___/
   \\___  (  <_> )  |  /  |  /\\___ \\ 
