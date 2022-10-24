@@ -2,7 +2,7 @@ import prompts from 'prompts'
 import { TemplateMap, templateConfigToArrary } from 'src/cli-setup'
 import type { PromptObject } from 'prompts'
 
-const gitInquiry = async (type: 'lib' | 'project') => {
+const gitInquiry = async (type: string) => {
   const gitInitQuestions: PromptObject[] = [
     {
       type: 'select',

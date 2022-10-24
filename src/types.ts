@@ -14,3 +14,9 @@ export type TemplateDesc = {
 export type Template = {
   [K in string]: TemplateDesc
 }
+
+export interface Input {
+  name: string
+  value: boolean | string
+  options?: any
+}

@@ -1,16 +1,12 @@
 #!/usr/bin/env node
-import { initTemplate } from '@modules/template'
-import { janghood } from '@modules/janghood'
-import YouusCommander from './YouusCommander'
+import { Command } from 'commander'
 import { showAppHeader } from './console-print'
+import { TemplateLoader } from './modules/template/template.loader'
 
 showAppHeader()
 
-const youusCommander = new YouusCommander('youus-cli')
-youusCommander.name('youus-cli')
+const youusCommander = new Command()
 
-youusCommander.addTemplateCommand(initTemplate())
-
-youusCommander.addJanHoodCommand(janghood())
+TemplateLoader.load(youusCommander)
 
 youusCommander.parse()
