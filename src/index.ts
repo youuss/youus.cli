@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander'
+import { TemplateLoader } from '@modules/template'
 import { showAppHeader } from './console-print'
-import { TemplateLoader } from './modules/template/template.loader'
 
 showAppHeader()
 

@@ -15,6 +15,8 @@ export type Template = {
   [K in string]: TemplateDesc
 }
 
+export type TemplateTypes = 'lib' | 'project' | 'janghood'
+
 export interface Input {
   name: string
   value: boolean | string
