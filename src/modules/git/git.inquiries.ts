@@ -9,8 +9,8 @@ export interface InitAnswer {
 
 export const initInquiry: (type: string) => Promise<InitAnswer> = (type) =>
   new Promise<InitAnswer>((resolve, reject) => {
-    if (!TemplateMap[type]) {
-      reject(`this 【${type}】has no template to init`)
+    if (Object.keys(TemplateMap[type]).length === 0) {
+      reject(`this type of【${type}】has no template to init`)
     }
     const gitInitQuestions: PromptObject[] = [
       {
